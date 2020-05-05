@@ -10,7 +10,7 @@
     position: relative;
     color: grey;
     padding-left: 40px;
-  } 
+}
 
 .label-title::before {
     content: '';
@@ -21,4 +21,4 @@
     width: 30px;
     height: 1px;
     background: #3c5a99;
-  }
+}
