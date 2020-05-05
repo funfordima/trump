@@ -25,6 +25,7 @@
   <link rel="me" href="tel:+380661737150">
   <link rel="shortcut icon" type="image/x-icon" href="png/fav.ico">
   <link rel="stylesheet" href="https://volodymyrkushnir.com/assets/stylesheets/base.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -391,8 +392,8 @@
                   FILET-O-FISH BIG MAC
                   <a href="https://www.youtube.com/watch?v=c6YyVmXQKIY" rel="external">CHINA</a> QUARTER POUNDER DIET
                   COKE
-                  TARIFFS BIBLE ARTOF DEAL PATRIOTS BEAUTIFUL MODELS GOLD REAL ESTATE WAR PROTESTERS CONSTRUCTION
-                  RUSSIANS
+                  TARIFFS BIBLE ARTOF DEAL PATRIOTS BEAUTIFUL MODELS GOLD REAL ESTATE WAR PROTESTERS
+                  CONSTRUCTION RUSSIANS
                   <button onclick="audio.play()" class="audio"><svg xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 576 512">
                       <path
@@ -403,7 +404,9 @@
                       <source src="sound/trump.mp3" type="audio/mpeg">
                     </audio>
                   </button>
-                  BANKS SPORTS WOMEN MEXICO RED HAT KOREANS GOLF EVERYBODY
+                  BANKS SPORTS WOMEN MEXICO RED
+                  <button id="salmon" class="color salmon">SALMON</button>
+                  HAT KOREANS GOLF EVERYBODY
                   <a href="https://www.thenation.com/article/archive/donald-trump-is-running-america-like-its-a-casino/"
                     rel="external"><sup>[1]</sup></a>
                   <a href="https://edition.cnn.com/2019/06/18/politics/donald-trump-term-limit/"
@@ -415,9 +418,9 @@
                 <h3>Dislikes&#x1f61e;</h3>
                 <p class="tags small">OWN BAD HABITS DOGS MEDIA CNN GERMANS MEXICANS
                   IMMIGRANTS SHITHOLE COUNTRIES
-                  UNATTRACTIVE WOMEN BLACKS SUSHI
-
-                  HOT-DOGS ALCOHOL FRUIT CHRISTMAS PARTIES LIBERALS
+                  UNATTRACTIVE WOMEN
+                  <button id="black" class="color black">BLACK</button>
+                  SUSHI HOT-DOGS ALCOHOL FRUIT CHRISTMAS PARTIES LIBERALS
                 </p>
               </section>
               <!-- Wants -->
@@ -446,9 +449,17 @@
   </footer>
 
   <script>
+    function switchToColor(color) {
+      try {
+        document.querySelectorAll(".page").forEach(function (page) {
+          page.style.borderColor = color;
+        });
+      } catch (error) { };
+    }
 
+    document.getElementById("salmon").addEventListener("click", switchToColor.bind(this, "salmon"));
+    document.getElementById("black").addEventListener("click", switchToColor.bind(this, "black"));
   </script>
-
 </body>
 
 </html>
