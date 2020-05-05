@@ -12,7 +12,7 @@
     padding-left: 40px;
   } 
 
-  .label-title::before {
+.label-title::before {
     content: '';
     position: absolute;
     top: 50%;
