@@ -10,8 +10,9 @@
     position: relative;
     color: grey;
     padding-left: 40px;
-  } 
-  .label-title::before {
+}
+
+.label-title::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -20,5 +21,4 @@
     width: 30px;
     height: 1px;
     background: #3c5a99;
-  }
-
+}
