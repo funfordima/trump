@@ -24,6 +24,7 @@
   <link rel="me" href="skype:donald_trump">
   <link rel="me" href="tel:+380661737150">
   <link rel="stylesheet" href="https://volodymyrkushnir.com/assets/stylesheets/base.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -193,8 +194,8 @@
                   <p><small>2001</small></p>
                   <p>Completed Trump World Tower and joined the Democratic Party</p>
                 </li>
-                <h6>Way back then</h6>
               </ul>
+              <h6>Way back then</h6>
               <ul class="timeline">
                 <li>
                   <p><small>1999</small></p>
@@ -275,14 +276,17 @@
                   <input type="checkbox" id="1980">
                   <label for="1980" class="summary">Developing the Trump Tower skyscraper in Manhattan</label>
                   <div>
-                    <ul>Started developing the Trump Tower skyscraper in Manhattan
+                    <ul>
+                      <p>Started developing the Trump Tower skyscraper in Manhattan
+                      </p>
                       <li>Payed a crew of undocumented Polish workers to demolish the historic Bonwit Teller store,
                         including art deco features.
                       </li>
                       <li>Architectural critic Paul Goldberger stated that the tower's atrium is "the most pleasant
                         interior public space to be completed in New York in some years".
                       </li>
-                      Started a repair job on the Wollman Rink in Central Park
+                      <p>Started a repair job on the Wollman Rink in Central Park
+                      </p>
                       <li>completed the work in three months for $1.95 million, which was $775,000 less than the initial
                         budget!
                       </li>
@@ -385,18 +389,21 @@
                   FILET-O-FISH BIG MAC
                   <a href="https://www.youtube.com/watch?v=c6YyVmXQKIY" rel="external">CHINA</a> QUARTER POUNDER DIET
                   COKE
-                  TARIFFS BIBLE ARTOF DEAL PATRIOTS BEAUTIFUL MODELS GOLD REAL ESTATE WAR PROTESTERS CONSTRUCTION
-                  RUSSIANS
+                  TARIFFS BIBLE ARTOF DEAL PATRIOTS BEAUTIFUL MODELS GOLD REAL ESTATE WAR PROTESTERS
+                  CONSTRUCTION RUSSIANS
                   <button onclick="audio.play()" class="audio"><svg xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 576 512">
                       <path
                         d="M576 256c0 100.586-53.229 189.576-134.123 239.04-7.532 4.606-17.385 2.241-21.997-5.304-4.609-7.539-2.235-17.388 5.304-21.997C496.549 424.101 544 345.467 544 256c0-89.468-47.452-168.101-118.816-211.739-7.539-4.609-9.913-14.458-5.304-21.997 4.608-7.539 14.456-9.914 21.997-5.304C522.77 66.424 576 155.413 576 256zm-96 0c0-66.099-34.976-124.572-88.133-157.079-7.538-4.611-17.388-2.235-21.997 5.302-4.61 7.539-2.236 17.388 5.302 21.998C418.902 152.963 448 201.134 448 256c0 54.872-29.103 103.04-72.828 129.779-7.538 4.61-9.912 14.459-5.302 21.998 4.611 7.541 14.462 9.911 21.997 5.302C445.024 380.572 480 322.099 480 256zm-138.14-75.117c-7.538-4.615-17.388-2.239-21.998 5.297-4.612 7.537-2.241 17.387 5.297 21.998C341.966 218.462 352 236.34 352 256s-10.034 37.538-26.841 47.822c-7.538 4.611-9.909 14.461-5.297 21.998 4.611 7.538 14.463 9.909 21.998 5.297C368.247 314.972 384 286.891 384 256s-15.753-58.972-42.14-75.117zM256 88.017v335.964c0 21.436-25.942 31.999-40.971 16.971L126.059 352H24c-13.255 0-24-10.745-24-24V184c0-13.255 10.745-24 24-24h102.059l88.971-88.954C230.037 56.038 256 66.551 256 88.017zm-32 19.311l-77.659 77.644A24.001 24.001 0 0 1 129.372 192H32v128h97.372a24.001 24.001 0 0 1 16.969 7.028L224 404.67V107.328z">
                       </path>
                     </svg> HI
-                    <audio id="audio" preload="none" src="sound/trump.mp3" type="audio/mpeg">
+                    <audio id="audio" preload="none">
+                      <source src="sound/trump.mp3" type="audio/mpeg">
                     </audio>
                   </button>
-                  BANKS SPORTS WOMEN MEXICO RED HAT KOREANS GOLF EVERYBODY
+                  BANKS SPORTS WOMEN MEXICO RED
+                  <button id="salmon" class="color salmon">SALMON</button>
+                  HAT KOREANS GOLF EVERYBODY
                   <a href="https://www.thenation.com/article/archive/donald-trump-is-running-america-like-its-a-casino/"
                     rel="external"><sup>[1]</sup></a>
                   <a href="https://edition.cnn.com/2019/06/18/politics/donald-trump-term-limit/"
@@ -408,8 +415,9 @@
                 <h3>Dislikes&#x1f61e;</h3>
                 <p class="tags small">OWN BAD HABITS DOGS MEDIA CNN GERMANS MEXICANS
                   IMMIGRANTS SHITHOLE COUNTRIES
-                  UNATTRACTIVE WOMEN BLACKS SUSHI
-                  HOT-DOGS ALCOHOL FRUIT CHRISTMAS PARTIES LIBERALS
+                  UNATTRACTIVE WOMEN
+                  <button id="black" class="color black">BLACK</button>
+                  SUSHI HOT-DOGS ALCOHOL FRUIT CHRISTMAS PARTIES LIBERALS
                 </p>
               </section>
               <!-- Wants -->
@@ -435,8 +443,20 @@
   <footer>
     <em>&mdash; That's all, folks!</em>
     "&nbsp;🐷"
-
   </footer>
+
+  <script>
+    function switchToColor(color) {
+      try {
+        document.querySelectorAll(".page").forEach(function (page) {
+          page.style.borderColor = color;
+        });
+      } catch (error) { };
+    }
+
+    document.getElementById("salmon").addEventListener("click", switchToColor.bind(this, "salmon"));
+    document.getElementById("black").addEventListener("click", switchToColor.bind(this, "black"));
+  </script>
 </body>
 
 </html>
