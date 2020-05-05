@@ -1,0 +1,23 @@
+.color .black::before {
+    background-color: black;
+}
+
+.color .salmon::before {
+    background-color: salmon;
+}
+
+.label-title {
+    position: relative;
+    color: grey;
+    padding-left: 40px;
+  } 
+  .label-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 1px;
+    background: #3c5a99;
+  }
